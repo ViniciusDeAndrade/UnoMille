@@ -1,7 +1,7 @@
 package data;
 
 public class Message {
-
+// commit
 	private String message;
 	
 	public Message(String message){

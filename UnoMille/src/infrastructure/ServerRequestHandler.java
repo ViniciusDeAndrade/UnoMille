@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-// teste de commit
+
 public class ServerRequestHandler {
 
 	private int port;
