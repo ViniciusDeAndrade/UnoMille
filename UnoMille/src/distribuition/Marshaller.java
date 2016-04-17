@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import data.Message;
 
 public class Marshaller {
-	//teste de 
+	
 
 	public byte [] marshall (Message msgToBeMarshelled) throws IOException, InterruptedException{
 		
