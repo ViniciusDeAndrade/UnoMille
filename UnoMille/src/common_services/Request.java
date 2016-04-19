@@ -18,7 +18,8 @@ public class Request {
 
 		//serialização da mensagem e respectivo envio
 
-		Message mensagem = new Message(texto);
+		Message mensagem = new Message();
+		mensagem.setMessage(texto);
 		Marshaller m = new Marshaller();
 		ClientRequestHandler crh = new ClientRequestHandler("localhost", 1313);
 
@@ -38,9 +39,27 @@ public class Request {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//recebimento
+		byte [] reply = null;
+		try {
+			reply = crh.receive();
+		} catch (IOException | InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-
-
+		//desearilização 
+		Message resposta = new Message();
+		try {
+			resposta = (Message) m.unmarshall(reply);
+		} catch (ClassNotFoundException | IOException | InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println(resposta.getMessage());
+		
 	}
 
 }
