@@ -11,10 +11,10 @@ public class Reply {
 
 
 		//pegando a mensagem
-		ServerRequestHandler srh = new ServerRequestHandler(1313);
+		ServerRequestHandler serverRequestHandler = new ServerRequestHandler(1313);
 		byte [] mensagemSerializada = null;
 		try {
-			mensagemSerializada = srh.receive();
+			mensagemSerializada = serverRequestHandler.receive();
 		} catch (IOException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -22,7 +22,7 @@ public class Reply {
 
 
 		//Deserizalizando
-		Message mensagem = null;
+		Message mensagem = new Message();
 		Marshaller marshaller = new Marshaller();
 		try {
 			mensagem = (Message) marshaller.unmarshall(mensagemSerializada);
@@ -44,7 +44,7 @@ public class Reply {
 		
 		//reply mensagem
 		try {
-			srh.send(reply);
+			serverRequestHandler.send(reply);
 		} catch (IOException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
