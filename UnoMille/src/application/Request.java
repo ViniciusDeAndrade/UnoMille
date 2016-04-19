@@ -21,7 +21,7 @@ public class Request {
 		Message mensagem = new Message();
 		mensagem.setMessage(texto);
 		Marshaller m = new Marshaller();
-		ClientRequestHandler serverRequestHandler = new ClientRequestHandler("localhost", 1313);
+		ClientRequestHandler clienteRequestHandler = new ClientRequestHandler("localhost", 1313);
 
 		byte[] mensagemSerializada = null;
 		//serialização
@@ -34,7 +34,7 @@ public class Request {
 		}
 		//envio
 		try {
-			serverRequestHandler.send(mensagemSerializada);
+			clienteRequestHandler.send(mensagemSerializada);
 		} catch (ClassNotFoundException | IOException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -43,7 +43,7 @@ public class Request {
 		//recebimento
 		byte [] reply = null;
 		try {
-			reply = serverRequestHandler.receive();
+			reply = clienteRequestHandler.receive();
 		} catch (IOException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
