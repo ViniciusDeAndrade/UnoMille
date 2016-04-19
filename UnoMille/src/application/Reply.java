@@ -1,4 +1,4 @@
-package common_services;
+package application;
 
 import java.io.IOException;
 
@@ -25,7 +25,7 @@ public class Reply {
 		Message mensagem = new Message();
 		Marshaller marshaller = new Marshaller();
 		try {
-			mensagem = (Message) marshaller.unmarshall(mensagemSerializada);
+			mensagem = marshaller.unmarshall(mensagemSerializada);
 		} catch (ClassNotFoundException | IOException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,4 +1,4 @@
-package common_services;
+package application;
 
 import java.io.IOException;
 import java.util.Scanner;
