@@ -19,6 +19,8 @@ public class ClientRequestHandler {
 	
 	public ClientRequestHandler(String host, int port){
 		
+		this.port = port;
+		this.host = host;		
 	}
 	
 	public void send(byte[]message)throws IOException, InterruptedException, 
