@@ -40,6 +40,7 @@ public class ClientRequestHandler {
 		byte [] message = null;
 		this.receiveMenssageSize = this.inFromServer.readInt();
 		message = new byte[this.receiveMenssageSize];
+		this.inFromServer.read(message,0,this.receiveMenssageSize);
 		
 		this.clientSocket.close();
 		this.outToServer.close();
