@@ -40,7 +40,7 @@ public class Request {
 			e.printStackTrace();
 		}
 		
-		//recebimento
+		//recebimento da mensagem
 		byte [] reply = null;
 		try {
 			reply = clienteRequestHandler.receive();
