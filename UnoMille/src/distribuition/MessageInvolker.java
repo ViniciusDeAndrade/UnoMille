@@ -9,6 +9,9 @@ import services.ClientProxy;
 
 public class MessageInvolker {
 
+	public static final String SETMESSAGE = "setMessage";
+	public static final String GETMESSAGE = "getMessage";
+	
 	public void involke(ClientProxy clientProxy) throws IOException, Throwable{
 		
 		ServerRequestHandler serverRequestHandler = new ServerRequestHandler(clientProxy.getPort());
@@ -27,6 +30,18 @@ public class MessageInvolker {
 			//receba a mensagem e unmarshall-a
 			messageToBeUnmarshalled = serverRequestHandler.receive();
 			messageUnmarshalled = marshaller.unmarshall(messageToBeUnmarshalled);
+			
+			switch (messageUnmarshalled.getBody().getRequestHeader().getOperation()){
+			
+			case SETMESSAGE:
+				
+				//invoca o objeto remoto
+				String msg = (String) messageUnmarshalled.getBody().getRequestBody().getParameters().get(0);
+				
+				//Agora preciso saber o que é exatamente o TERMINATION e o Invocation
+				
+				
+			}
 			
 			
 		}

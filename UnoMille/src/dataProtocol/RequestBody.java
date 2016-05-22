@@ -10,6 +10,16 @@ public class RequestBody {
 	public RequestBody(List<Object> parameters) {
 		this.parameters.add(parameters);
 	}
+
+	public List<Object> getParameters() {
+		return parameters;
+	}
+
+	public void setParameters(List<Object> parameters) {
+		this.parameters = parameters;
+	}
+	
+	
 	
 	
 }

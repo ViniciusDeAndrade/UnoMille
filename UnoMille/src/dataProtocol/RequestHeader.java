@@ -17,6 +17,46 @@ public class RequestHeader implements Serializable{
 		this.objectKey = objectKey;
 		this.operation = operation;
 	}
+
+	public String getContext() {
+		return context;
+	}
+
+	public void setContext(String context) {
+		this.context = context;
+	}
+
+	public int getRequestId() {
+		return requestId;
+	}
+
+	public void setRequestId(int requestId) {
+		this.requestId = requestId;
+	}
+
+	public boolean isResponseExpected() {
+		return responseExpected;
+	}
+
+	public void setResponseExpected(boolean responseExpected) {
+		this.responseExpected = responseExpected;
+	}
+
+	public int getObjectKey() {
+		return objectKey;
+	}
+
+	public void setObjectKey(int objectKey) {
+		this.objectKey = objectKey;
+	}
+
+	public String getOperation() {
+		return operation;
+	}
+
+	public void setOperation(String operation) {
+		this.operation = operation;
+	}
 	
 	
 }
