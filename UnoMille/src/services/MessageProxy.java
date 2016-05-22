@@ -6,7 +6,7 @@ import java.util.List;
 
 import apoio.Invocation;
 
-public class MessageProxy extends ClientProxy implements IMensager{
+public class MessageProxy extends ClientProxy implements IMessager{
 
 	@Override
 	public void setMessage(String mensagem) {
