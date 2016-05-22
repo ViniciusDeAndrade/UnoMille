@@ -3,9 +3,9 @@ package application;
 import java.io.IOException;
 import java.util.Scanner;
 
-import data.Message;
 import distribuition.Marshaller;
 import infrastructure.ClientRequestHandler;
+import services.Message;
 
 //lado cliente
 public class Request {

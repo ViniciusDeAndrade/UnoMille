@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import data.Message;
+import services.Message;
 
 public class Marshaller {
 	

@@ -2,9 +2,9 @@ package application;
 
 import java.io.IOException;
 
-import data.Message;
 import distribuition.Marshaller;
 import infrastructure.ServerRequestHandler;
+import services.Message;
 
 public class Reply {
 	public static void main(String[] args) {
