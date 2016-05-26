@@ -1,6 +1,8 @@
 package distribuition;
 
 import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 import apoio.Termination;
 import dataProtocol.Message;
@@ -16,9 +18,10 @@ public class CalculatorInvolker {
 
 	public static final String FIBONACCI = "Fibonacci";
 	public static final String FATORIAL = "fatorial";
+	
 
 	public void involke(ClientProxy clientProxy) throws IOException, Throwable{
-
+	//public void involke(Socket socket, int port) throws IOException, Throwable{	
 		ServerRequestHandler serverRequestHandler = new ServerRequestHandler(clientProxy.getPort());
 		byte[] messageToBeUnmarshalled = null;
 		byte[] messageMarshalled = null;
@@ -60,9 +63,6 @@ public class CalculatorInvolker {
 
 			//reply
 			serverRequestHandler.send(messageMarshalled);
-
-			
-
 
 		}
 
