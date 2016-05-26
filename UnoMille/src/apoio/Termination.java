@@ -3,11 +3,11 @@ package apoio;
 public class Termination {
 
 	
-	public void getResult(){
-		
+	public long getResult(){
+		return 0;
 	}
 	
-	public void setResult(){
-		
+	public long setResult(){
+		return 0;
 	}
 }
