@@ -2,12 +2,13 @@ package apoio;
 
 public class Termination {
 
+	private long numero;
 	
 	public long getResult(){
-		return 0;
+		return this.numero;
 	}
 	
-	public long setResult(){
-		return 0;
+	public void setResult(long numero){		
+		this.numero = numero;
 	}
 }
